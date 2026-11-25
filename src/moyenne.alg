@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Algo>
-    <description courant="somme PREND_LA_VALEUR somme+note" texte="Calcule la moyenne de plusieurs notes et indique si l'élève est admis."/>
+    <description courant="AFFICHER moyenne" texte="Calcule la moyenne de plusieurs notes et indique si l'élève est admis."/>
     <extension extnom="inactif"/>
     <fonction fctcode="" fctetat="inactif"/>
     <F2 F2defaut="" F2etat="inactif" F2lignes="" F2para=""/>
@@ -25,6 +25,9 @@
             <item algoitem="" code=""/>
             <item algoitem="FIN_POUR" code="14#finpour"/>
         </item>
+        <item algoitem="moyenne PREND_LA_VALEUR somme/nb" code="5#moyenne#somme/nb#pasliste"/>
+        <item algoitem="AFFICHER &quot;Moyenne : &quot;" code="4#Moyenne : #0"/>
+        <item algoitem="AFFICHER moyenne" code="3#moyenne#1#pasliste"/>
     </item>
     <item algoitem="FIN_ALGORITHME" code="102#finalgo"/>
 </Algo>
