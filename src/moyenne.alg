@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Algo>
-    <description courant="LIRE nb" texte="Calcule la moyenne de plusieurs notes et indique si l'élève est admis."/>
+    <description courant="somme PREND_LA_VALEUR somme+note" texte="Calcule la moyenne de plusieurs notes et indique si l'élève est admis."/>
     <extension extnom="inactif"/>
     <fonction fctcode="" fctetat="inactif"/>
     <F2 F2defaut="" F2etat="inactif" F2lignes="" F2para=""/>
@@ -17,6 +17,14 @@
     <item algoitem="DEBUT_ALGORITHME" code="101#debutalgo">
         <item algoitem="AFFICHER &quot;Calculateur de moyenne&quot;" code="4#Calculateur de moyenne#1"/>
         <item algoitem="LIRE nb" code="2#nb#pasliste"/>
+        <item algoitem="somme PREND_LA_VALEUR 0" code="5#somme#0#pasliste"/>
+        <item algoitem="POUR i ALLANT_DE 1 A nb" code="12#i#1#nb">
+            <item algoitem="DEBUT_POUR" code="13#debutpour"/>
+            <item algoitem="LIRE note" code="2#note#pasliste"/>
+            <item algoitem="somme PREND_LA_VALEUR somme+note" code="5#somme#somme+note#pasliste"/>
+            <item algoitem="" code=""/>
+            <item algoitem="FIN_POUR" code="14#finpour"/>
+        </item>
     </item>
     <item algoitem="FIN_ALGORITHME" code="102#finalgo"/>
 </Algo>
